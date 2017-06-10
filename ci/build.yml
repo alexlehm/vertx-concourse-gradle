@@ -9,4 +9,5 @@ image_resource:
   source: {repository: gradle, tag: 3.5-jdk}
 
 run:
-  path: source/ci/build.sh
+  path: bash
+  args: [source/ci/build.sh]
