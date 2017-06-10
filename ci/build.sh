@@ -4,4 +4,5 @@ export TERM=${TERM:-dumb}
 cd source
 ls
 gradle -v
-gradle --no-daemon test
+chmod a+x gradlew
+./gradlew --no-daemon test
