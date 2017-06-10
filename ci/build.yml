@@ -9,4 +9,4 @@ image_resource:
   source: {repository: gradle, tag: 3.5-jdk-alpine}
 
 run:
-  path: resource-tutorial/ci/build.sh
+  path: source/ci/build.sh
