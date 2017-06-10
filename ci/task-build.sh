@@ -1,3 +1,6 @@
 #!/bin/sh
 
-ls *
+gradle -v
+gradle tasks
+gradle test
+gradle build
