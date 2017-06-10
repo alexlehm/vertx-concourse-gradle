@@ -23,5 +23,7 @@ jobs:
       image_resource:
         type: docker-image
         source: {repository: gradle, tag: 3.5-jdk-alpine}
+      inputs:
+      - name: source
       run:
         path: source/ci/task-build.sh
