@@ -6,7 +6,7 @@ inputs:
 
 image_resource:
   type: docker-image
-  source: {repository: gradle, tag: 3.5-jdk-alpine}
+  source: {repository: gradle, tag: 3.5-jdk}
 
 run:
   path: source/ci/build.sh
