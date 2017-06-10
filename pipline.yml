@@ -9,7 +9,7 @@ resources:
 - name: timer
   type: time
   source:
-    interval: 2m
+    interval: 1m
 
 jobs:
 - name: vertx-gradle
@@ -26,8 +26,10 @@ jobs:
         source: {repository: gradle, tag: 3.5-jdk-alpine}
       inputs:
       - name: source
-      run:
-        path: source/ci/task-build.sh
       # run:
-      #   path: ls
-      #   args: [source]
+      #   path: source/ci/task-build.sh
+      file: source/ci/build.yml
+      # run:
+      #   path: gradle
+      #   args: [-P source/]
+
