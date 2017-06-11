@@ -1,5 +1,16 @@
-FROM vertx/vertx3-exec
+FROM openjdk:8-jre-alpine                                           
 
-COPY vertx-stack.json ${VERTX_HOME}/vertx-stack.json
+ENV VERTICLE_FILE vertx-concourse-gradle-3.4.1-fat.jar      
 
-RUN vertx resolve && rm -rf ${HOME}/.m2
+# Set the location of the verticles
+ENV VERTICLE_HOME /usr/verticles
+
+EXPOSE 8181
+
+# Copy your fat jar to the container
+COPY ../build/libs/$VERTICLE_FILE $VERTICLE_HOME/                          
+
+# Launch the verticle
+WORKDIR $VERTICLE_HOME
+ENTRYPOINT ["sh", "-c"]
+CMD ["exec java -jar $VERTICLE_FILE"]      
