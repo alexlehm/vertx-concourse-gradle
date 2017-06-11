@@ -15,6 +15,7 @@ mainClassName = 'io.vertx.core.Launcher'
 
 dependencies {
     compile "io.vertx:vertx-core:$version"
+
     testCompile "io.vertx:vertx-unit:$version"
     testCompile 'junit:junit:4.12'
 }
