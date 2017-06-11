@@ -8,7 +8,7 @@ ENV VERTICLE_HOME /usr/verticles
 EXPOSE 8181
 
 # Copy your fat jar to the container
-COPY ../build/libs/$VERTICLE_FILE $VERTICLE_HOME/                          
+COPY ./build/libs/$VERTICLE_FILE $VERTICLE_HOME/                          
 
 # Launch the verticle
 WORKDIR $VERTICLE_HOME
