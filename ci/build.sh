@@ -3,7 +3,7 @@
 ls
 
 mkdir build
-chmod a+x build/*
+chmod a+x build/
 
 cd source
 ls
