@@ -1,5 +1,5 @@
 #!/bin/sh
-gradle test --project-dir ./source --project-cache-dir ./build
+gradle build --project-dir ./source --project-cache-dir ./build
 
 ls
 ls build/
