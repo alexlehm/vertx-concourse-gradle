@@ -18,6 +18,6 @@ jobs:
   - get: source
   - get: timer
     trigger: true
-  - task: hello-world
+  - task: gradle-build
     file: source/ci/build.yml
 
