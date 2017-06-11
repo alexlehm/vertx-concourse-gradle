@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
-# export TERM=${TERM:-dumb}
+ls
+
 mkdir build
 chmode a+x build/*
 
