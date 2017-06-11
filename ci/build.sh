@@ -5,4 +5,5 @@ cd source
 ls
 gradle -v
 chmod a+x gradlew
-./gradlew --no-daemon test
+gradle test
+# ./gradlew --no-daemon test
