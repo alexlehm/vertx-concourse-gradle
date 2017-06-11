@@ -12,13 +12,17 @@ resources:
     interval: 1m
 
 jobs:
-- name: vertx-gradle
+- name: gradle
   public: true
   plan:
   - get: source
   - get: timer
     trigger: true
-  - task: gradle-build
-    file: source/ci/build.yml
-  - task: docker-build
+  - task: gradle
+    file: source/ci/gradle.yml
+- name: docker
+  public: true
+  plan:
+  - get: source
+  - task: docker
     file: source/ci/docker.yml
