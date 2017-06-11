@@ -6,10 +6,13 @@ resources:
   source:
     uri: https://github.com/gadieichhorn/vertx-concourse-gradle.git
     branch: master
-# - name: timer
-#   type: time
-#   source:
-#     interval: 1m
+- name: docker-hub
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-hub-image-hello-world}}
 
 jobs:
 - name: gradle
@@ -19,5 +22,6 @@ jobs:
     trigger: true
   - task: gradle
     file: source/ci/gradle.yml
-  - task: docker
-    file: source/ci/docker.yml
+  - put: docker-hub
+    params:
+      build: source/docker
