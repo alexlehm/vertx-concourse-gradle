@@ -4,4 +4,4 @@
 cd source
 ls
 gradle -v
-gradle test --info
+gradle test --project-cache-dir build
