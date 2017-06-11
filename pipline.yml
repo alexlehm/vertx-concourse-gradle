@@ -21,8 +21,10 @@ jobs:
   - task: gradle
     file: source/ci/gradle.yml
 - name: docker
+  serial: true
   public: true
   plan:
   - get: source
+    passed: [gradle]
   - task: docker
     file: source/ci/docker.yml
