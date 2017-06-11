@@ -20,4 +20,9 @@ jobs:
     trigger: true
   - task: gradle-build
     file: source/ci/build.yml
-
+- name: vertx-docker
+  public: true
+  plan:
+  - get: source
+  - task: docker-build
+    file: source/ci/docker.yml
