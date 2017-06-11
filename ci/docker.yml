@@ -6,6 +6,5 @@ inputs:
 - name: build
 
 run:
-  user: root
   path: sh
   args: [source/ci/docker.sh]

@@ -6,25 +6,18 @@ resources:
   source:
     uri: https://github.com/gadieichhorn/vertx-concourse-gradle.git
     branch: master
-- name: timer
-  type: time
-  source:
-    interval: 1m
+# - name: timer
+#   type: time
+#   source:
+#     interval: 1m
 
 jobs:
 - name: gradle
   public: true
   plan:
   - get: source
-  - get: timer
     trigger: true
   - task: gradle
     file: source/ci/gradle.yml
-- name: docker
-  serial: true
-  public: true
-  plan:
-  - get: source
-    passed: [gradle]
   - task: docker
     file: source/ci/docker.yml
