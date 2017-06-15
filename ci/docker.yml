@@ -2,7 +2,7 @@
 platform: linux
 
 inputs:
-- name: build
+- name: source/build
 - name: source
 
 outputs:
