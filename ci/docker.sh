@@ -1,5 +1,5 @@
 #!/bin/sh
-docker build .
+docker build source/docker
 
 ls -l
 ls -l build/
