@@ -6,8 +6,8 @@ resources:
   source:
     uri: https://github.com/alexlehm/vertx-concourse-gradle.git
     branch: master
-- name: docker
-  type: docker-image
+#- name: docker
+#  type: docker-image
 
 jobs:
 - name: gradle
